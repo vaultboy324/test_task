@@ -1,0 +1,41 @@
+CREATE TABLE regions (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	name VARCHAR(30)
+);
+
+INSERT INTO regions (name) VALUES ('Краснодарский край');
+INSERT INTO regions (name) VALUES ('Ростовская область');
+INSERT INTO regions (name) VALUES ('Ставропольский край');
+
+CREATE TABLE cities (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	name VARCHAR(30),
+	code VARCHAR(6),
+	region_id INTEGER,
+	FOREIGN KEY (region_id) REFERENCES regions(id)
+);
+
+INSERT INTO cities (name, code, region_id) VALUES ('Краснодар', '861', 1);
+INSERT INTO cities (name, code, region_id) VALUES ('Кропоткин', '86138', 1);
+INSERT INTO cities (name, code, region_id) VALUES ('Армавир', '86137', 1);
+INSERT INTO cities (name, code, region_id) VALUES ('Ростов', '863', 2);
+INSERT INTO cities (name, code, region_id) VALUES ('Шахты', '8636', 2);
+INSERT INTO cities (name, code, region_id) VALUES ('Батайск', '86354', 2);
+INSERT INTO cities (name, code, region_id) VALUES ('Ставрополь', '8652', 3);
+INSERT INTO cities (name, code, region_id) VALUES ('Пятигорск' , '8793', 3);
+INSERT INTO cities (name, code, region_id) VALUES ('Кисловодск', '87937', 3);
+
+CREATE TABLE comments (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	surname VARCHAR(30),
+	name VARCHAR(30),
+	father_name VARCHAR(30),
+	phone VARCHAR(12),
+	email VARCHAR(30),
+	comment_text TEXT,
+	city_id INTEGER,
+	FOREIGN KEY (city_id) REFERENCES cities(id)
+	
+);
+
+INSERT INTO comments (surname, name, father_name, phone, email, comment_text, city_id) VALUES ('Солобуто', 'Алексей', 'Викторович', '+78615555555', 'example@mail.ru', 'Проверка таблицы', 1);

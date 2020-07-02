@@ -1,0 +1,13 @@
+table{
+    margin-top: 50px;
+    width: 100%;
+}
+
+.idColumn{
+    visibility: hidden;
+    width: 0%;
+}
+
+span{
+    padding: 10px;
+}

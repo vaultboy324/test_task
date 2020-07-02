@@ -1,0 +1,10 @@
+table{
+    min-width: 200px;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+}
+
+span{
+    padding: 10px;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CommentPage</title>
+    <link rel="stylesheet" type="text/css" href="../css/comment.css">
+</head>
+<body>
+<span class="link"><a href="view"> Посмотреть комментарии </a> </span>
+<span class="link"><a href="stat"> Посмотреть статистику по активным регионам </a> </span>
+<form id="input_form">
+    <div class="infoBlock">
+        <span class="formField">
+            <label for="surname_field">Фамилия:</label>
+            <input type="text" id="surname_field"/>
+        </span>
+
+        <span class="formField">
+            <label for="name_field">Имя:</label>
+            <input type="text" id="name_field"/>
+        </span>
+
+        <span class="formField">
+            <label for="father_name">Отчество:</label>
+            <input type="text" id="father_name">
+        </span>
+    </div>
+
+    <div class="infoBlock">
+        <span class="formField">
+            <label for="region_selector">Регион:</label>
+            <select id="region_selector">
+            </select>
+        </span>
+        <span class="formField">
+            <label for="city_selector">Город:</label>
+            <select id="city_selector">
+            </select>
+        </span>
+
+    </div>
+
+    <div class="infoBlock">
+        <span class="formField">
+            <label for="phone_field">Контактный телефон:</label>
+            <input id="phone_field" type="text" value="+7" disabled size="2">
+            <input id="code_field" type="text" disabled size="6">
+            <input id="free_part" type="number">
+        </span>
+        <span class="formField">
+            <label for="email_field">e-mail:</label>
+            <input type="email" id="email_field"/>
+        </span>
+    </div>
+
+    <div class="infoBlock">
+        <span class="formField">
+            <label for="comment_text">Текст комментария: </label>
+            <textarea id="comment_text" name="comment_text" cols="40" rows="5"></textarea>
+        </span>
+    </div>
+    <div class="submitButton">
+        <button type="submit" id="send_data">Отправить данные</button>
+    </div>
+</form>
+<script src="../js/comment.js"></script>
+</body>
+</html>

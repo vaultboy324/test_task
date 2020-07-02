@@ -1,0 +1,42 @@
+.infoBlock{
+    width: 100%;
+    min-height: 50px;
+    padding: 5px;
+}
+
+.formField{
+    padding-left: 10px;
+    min-width: 200px;
+}
+
+.submitButton{
+    text-align: right;
+}
+
+textarea {
+    resize: none;
+    vertical-align: top;
+}
+
+form{
+    max-width: 750px;
+    margin-top: 50px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input{
+    outline: none;
+}
+
+#free_part{
+    width: 6em;
+}
+
+.link{
+    padding: 10px;
+}
